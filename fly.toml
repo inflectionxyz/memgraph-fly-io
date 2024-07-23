@@ -1,0 +1,35 @@
+app = 'APP NAME'
+primary_region = 'REGION'
+
+[build]
+image = 'memgraph/memgraph-mage:latest'
+
+[[env]]
+MEMGRAPH_CONFIG = "/etc/memgraph/custom.conf"
+
+[[files]]
+guest_path = "/etc/memgraph/custom.conf"
+local_path = "./memgraph.conf"
+
+[mounts]
+source = "mg_data"
+destination = "/var/lib/memgraph"
+
+[[services]]
+protocol = 'tcp'
+internal_port = 7687
+
+[[services.ports]]
+port = 7687
+
+[[services]]
+protocol = 'tcp'
+internal_port = 7444
+
+[[services.ports]]
+port = 7444
+
+[[vm]]
+memory = '8gb'
+cpu_kind = 'performance'
+cpus = 1
