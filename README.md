@@ -19,6 +19,9 @@ You can add authentication by creating `MEMGRAPH_USERNAME` and `MEMGRAPH_PASSWOR
 4. Deploy the app: `flyctl deploy`
 5. Set the Fly.io auth secrets
 
+## Access:
+To access the Memgraph instance, be sure to set the "encrypted" setting to `true` with the client you're using. Then just use the Fly.io app URL as the host, your username and password, and you should be good to go.
+
 ## Notes:
 - I use a local copy of the Memgraph Lab to connect, you can find the download link [here](https://memgraph.com/download)
 
