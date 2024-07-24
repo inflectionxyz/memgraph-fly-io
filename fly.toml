@@ -30,6 +30,6 @@ internal_port = 7444
 port = 7444
 
 [[vm]]
-memory = '8gb'
+memory = '16gb'
 cpu_kind = 'performance'
-cpus = 1
+cpus = 2
